@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-80 sm:max-w-md md:max-w-3xl lg:max-w-4xl mx-auto;
+  }
+  .round-btn {
+    @apply bg-primary-cyan text-white rounded-full px-8 py-2 hover:bg-opacity-70 duration-200 font-bold;
+  }
+  .hollow-btn {
+    @apply bg-white text-primary-cyan px-8 py-2 font-bold;
+  }
+  .rectangle-btn {
+    @apply bg-primary-cyan text-white px-8 py-2 rounded-lg hover:bg-opacity-70 duration-200 font-bold;
+  }
+}
