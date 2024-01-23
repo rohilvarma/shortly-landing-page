@@ -9,6 +9,7 @@ import ActivityButton from "./ActivityButton";
 import URLInput from "./URLInput";
 import StatsPage from "./StatsPage";
 import ShortenedLinks from "./ShortenedLinks";
+import MobileNavbar from "./MobileNavbar";
 
 export {
   Navbar,
@@ -21,5 +22,6 @@ export {
   ActivityButton,
   URLInput,
   StatsPage,
-  ShortenedLinks
+  ShortenedLinks,
+  MobileNavbar
 };

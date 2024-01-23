@@ -1,14 +1,16 @@
+'use client'
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
-
 import logo from "/public/images/logo.svg";
 import { navLink, navButton } from "@/lib/constants";
-
-import { Button } from ".";
+import { Button, MobileNavbar } from ".";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [navIsOpen, setNavIsOpen] = useState<boolean>(false)
+
   return (
-    <nav className="flex justify-between md:justify-start items-center container my-8">
+    <nav className="flex justify-between md:justify-start items-center container my-8 relative">
       <Image
         src={logo}
         width={100}
@@ -34,7 +36,10 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <GiHamburgerMenu className="md:hidden text-neutral-gray cursor-pointer" size={35} />
+      <GiHamburgerMenu className="md:hidden text-neutral-gray cursor-pointer" size={35} onClick={() => setNavIsOpen(prev => !prev)} />
+      {
+        navIsOpen && <MobileNavbar />
+      }
     </nav>
   );
 };

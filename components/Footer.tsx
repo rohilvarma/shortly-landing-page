@@ -13,7 +13,7 @@ const Footer = () => {
   const getFooter = () => {
     return footerContent.map((content, index) => {
       const subSection = content.sectionLinks.map((link, index) => (
-        <div key={index} className="mb-2">
+        <div key={index} className="mb-2 duration-200 hover:text-primary-cyan">
           {link}
         </div>
       ));
